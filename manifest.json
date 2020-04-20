@@ -1,0 +1,46 @@
+{
+  "name": "Google App account Switcher",
+  "description": "Use Alt + <num> key to switch between google accounts for various google apps like Gmail, Play music, Google Drive etc",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "images/tabFlipper16.png",
+    "default_title": "Use Alt + <num> key to switch between google accounts"
+  },
+  "commands": {
+    "flip-tabs-forward": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right",
+        "mac": "Command+Shift+Right"
+      },
+      "description": "Flip tabs forward"
+    },
+    "flip-tabs-backwards": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left",
+        "mac": "Command+Shift+Left"
+      },
+      "description": "Flip tabs backwards"
+    },
+    "update-url": {
+      "suggested_key": {
+        "default": "Alt+1",
+        "mac": "Alt+1"
+      },
+      "description": "Update URL"
+    }
+  },
+  "icons": {
+    "16": "images/tabFlipper16.png",
+    "32": "images/tabFlipper32.png",
+    "48": "images/tabFlipper48.png",
+    "128": "images/tabFlipper128.png"
+  }
+}
