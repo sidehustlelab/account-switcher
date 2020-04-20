@@ -15,20 +15,6 @@
     "default_title": "Use Alt + <num> key to switch between google accounts"
   },
   "commands": {
-    "flip-tabs-forward": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Right",
-        "mac": "Command+Shift+Right"
-      },
-      "description": "Flip tabs forward"
-    },
-    "flip-tabs-backwards": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Left",
-        "mac": "Command+Shift+Left"
-      },
-      "description": "Flip tabs backwards"
-    },
     "update-url": {
       "suggested_key": {
         "default": "Alt+1",
