@@ -15,12 +15,75 @@
     "default_title": "Use Alt + <num> key to switch between google accounts"
   },
   "commands": {
-    "update-url": {
+    "account-0": {
+      "suggested_key": {
+        "default": "Alt+0",
+        "mac": "Alt+0"
+      },
+      "description": "Account 0"
+    },
+  "account-1": {
       "suggested_key": {
         "default": "Alt+1",
         "mac": "Alt+1"
       },
-      "description": "Update URL"
+      "description": "Account 1"
+    },
+    "account-2": {
+      "suggested_key": {
+        "default": "Alt+2",
+        "mac": "Alt+2"
+      },
+      "description": "Account 2"
+    },
+    "account-3": {
+      "suggested_key": {
+        "default": "Alt+3",
+        "mac": "Alt+3"
+      },
+      "description": "Account 3"
+    },
+    "account-4": {
+      // "suggested_key": {
+      //   "default": "Alt+4",
+      //   "mac": "Alt+4"
+      // },
+      "description": "Account 4"
+    },
+    "account-5": {
+      // "suggested_key": {
+      //   "default": "Alt+5",
+      //   "mac": "Alt+5"
+      // },
+      "description": "Account 5"
+    },
+    "account-6": {
+      // "suggested_key": {
+      //   "default": "Alt+6",
+      //   "mac": "Alt+6"
+      // },
+      "description": "Account 6"
+    },
+    "account-7": {
+      // "suggested_key": {
+      //   "default": "Alt+7",
+      //   "mac": "Alt+7"
+      // },
+      "description": "Account 7"
+    },
+    "account-8": {
+      // "suggested_key": {
+      //   "default": "Alt+8",
+      //   "mac": "Alt+8"
+      // },
+      "description": "Account 8"
+    },
+    "account-9": {
+      // "suggested_key": {
+      //   "default": "Alt+9",
+      //   "mac": "Alt+9"
+      // },
+      "description": "Account 9"
     }
   },
   "icons": {

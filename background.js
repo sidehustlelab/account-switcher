@@ -1,8 +1,9 @@
 chrome.commands.onCommand.addListener(function (command) {
-  if (command === 'update-url') {
+  if (command.match("account-[0-9]") ) {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
+    
       var current_url = tabs[0].url;
-      var account_num = 1;
+      var account_num = command.substring(command.length - 1);
       var update_url_regex = null;
       var update_acc = null;
 
@@ -36,7 +37,8 @@ chrome.commands.onCommand.addListener(function (command) {
 
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
-        chrome.tabs.update({ url: current_url });
+        console.log(current_url)
+        chrome.tabs.update({ url: current_url });       
       }
       else {
         console.log("Account switching is not supported on this page.")
