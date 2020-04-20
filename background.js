@@ -39,7 +39,7 @@ chrome.commands.onCommand.addListener(function (command) {
       const classroom_regex = "https:\/\/classroom.google.com\/u\/[0-9].*";
       if (current_url.match(classroom_regex)) {
         update_url_regex = RegExp("u\/[0-9]");
-        update_acc = "?u=" + account_num
+        update_acc = "u/" + account_num
       }
 
       if (update_acc && update_url_regex) {
