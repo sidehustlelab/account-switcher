@@ -19,7 +19,9 @@ Say you have gmail account 0 open, you can press `Alt+2` to open the gmail accou
 
 1. Download the latest release in zip format from the [releases page](https://github.com/anshulahuja98/account-switcher/releases) of the repo.
 1. Open `Manage Extensions` page in chrome settings.
-1. Drag and drop the zip on this page, it will automatically install the extension.
+1. Turn on developer mode on top right corner
+1. Unzip the downloaded file
+1. Select the option "Load Unpacked" and select the unzipped folder that you got.
 
 
 ### Customization
