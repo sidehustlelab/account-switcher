@@ -18,7 +18,7 @@ chrome.commands.onCommand.addListener(function (command) {
           }
         }
         if (!updated) {
-          alert("Account switching is not supported on this page.")
+          alert("Support for this page is under development.")
         }
       } else {
         alert("Account switching is not supported on this page.")
