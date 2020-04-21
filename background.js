@@ -76,7 +76,7 @@ chrome.commands.onCommand.addListener(function (command) {
 
 
       // Google calendar
-      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].\*";
+      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
       console.log(current_url, calendar_regex)
       if (current_url.match(calendar_regex)) {
         update_url_regex = RegExp("b\/[0-9]");
