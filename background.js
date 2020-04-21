@@ -74,6 +74,15 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
+
+      // Google calendar
+      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].\*";
+      console.log(current_url, calendar_regex)
+      if (current_url.match(calendar_regex)) {
+        update_url_regex = RegExp("b\/[0-9]");
+        update_acc = "b/" + account_num
+      }
+
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
