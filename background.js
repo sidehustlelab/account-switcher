@@ -43,7 +43,7 @@ chrome.commands.onCommand.addListener(function (command) {
       }
 
       // Google Meet
-      const meet_regex = "https:\/\/meet.google.com\/.+?authuser=[0-9].*";
+      const meet_regex = "https:\/\/meet.google.com\/.*\?authuser=[0-9].*";
       if (current_url.match(meet_regex)) {
         update_url_regex = RegExp("authuser=[0-9]");
         update_acc = "authuser=" + account_num
