@@ -49,6 +49,14 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
+      // Google Hangouts
+      const hangouts_regex1 = "https:\/\/hangouts.google.com\/.*\?authuser=[0-9].*";
+      console.log(current_url, hangouts_regex1)
+      if (current_url.match(hangouts_regex1)) {
+        update_url_regex = RegExp("authuser=[0-9]");
+        update_acc = "authuser=" + account_num
+      }
+
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
