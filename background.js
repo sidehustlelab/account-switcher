@@ -99,6 +99,9 @@ chrome.runtime.onMessage.addListener(function (command) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added translate support
       // Google translate
       const translate_regex = "https:\/\/translate.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, translate_regex)
