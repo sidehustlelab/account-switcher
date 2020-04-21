@@ -83,6 +83,15 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "b/" + account_num
       }
 
+      // Google shopping
+      const shopping_regex = "https:\/\/www.google.co.in\/.*\?authuser=[0-9].*";
+      console.log(current_url, shopping_regex)
+      if (current_url.match(shopping_regex)) {
+        update_url_regex = RegExp("authuser=[0-9]");
+        update_acc = "authuser=" + account_num
+      }
+
+
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
