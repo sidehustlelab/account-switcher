@@ -78,8 +78,12 @@ chrome.runtime.onMessage.addListener(function (command) {
 =======
 
       // Google calendar
+<<<<<<< HEAD
       const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].\*";
 >>>>>>> Added google calendar support
+=======
+      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
+>>>>>>> updated calendar
       console.log(current_url, calendar_regex)
       if (current_url.match(calendar_regex)) {
         update_url_regex = RegExp("b\/[0-9]");
