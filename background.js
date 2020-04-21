@@ -99,6 +99,14 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
+       // Google Keep
+       const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
+       console.log(current_url, keep_regex)
+       if (current_url.match(keep_regex)) {
+         update_url_regex = RegExp("u\/[0-9]");
+         update_acc = "u/" + account_num
+       }
+
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
