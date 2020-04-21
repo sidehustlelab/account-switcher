@@ -91,6 +91,13 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
+      // Google translate
+      const translate_regex = "https:\/\/translate.google.co.in\/.*\?authuser=[0-9].*";
+      console.log(current_url, translate_regex)
+      if (current_url.match(translate_regex)) {
+        update_url_regex = RegExp("authuser=[0-9]");
+        update_acc = "authuser=" + account_num
+      }
 
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
