@@ -3,7 +3,7 @@ chrome.commands.onCommand.addListener(function (command) {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
       var current_url = tabs[0].url;
       var account_num = command.substring(command.length - 1);
-      var possible_regex = ["u/", "u=", "authuser="]
+      var possible_regex = ["u/", "u=", "authuser=", "b/"]
       // var mapping = {"u/":[], "u=", "authuser="}
 
       const google_regex = "https:\/\/.+.google.com.*"
@@ -19,8 +19,12 @@ chrome.commands.onCommand.addListener(function (command) {
           }
         }
         if (!updated) {
-          addition = (current_url[-1] == '/') ? "u/" : "/u/";
-          current_url = current_url + addition + account_num;
+          if (current_url.search("calendar.google.com") >= 0)
+            current_url = current_url.replace('/r', "/b/" + account_num + "/r");
+          else{
+            addition = (current_url[-1] == '/') ? "u/" : "/u/";
+            current_url = current_url + addition + account_num;
+          }
           chrome.tabs.update({ url: current_url });
         }
       } else {
