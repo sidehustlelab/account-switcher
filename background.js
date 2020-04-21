@@ -65,6 +65,15 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
+      
+      // Google Duo web
+      const duo_regex = "https:\/\/duo.google.com\/u\/[0-9].*";
+      console.log(current_url, duo_regex)
+      if (current_url.match(duo_regex)) {
+        update_url_regex = RegExp("u\/[0-9]");
+        update_acc = "u/" + account_num
+      }
+
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
