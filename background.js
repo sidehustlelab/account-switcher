@@ -87,6 +87,9 @@ chrome.runtime.onMessage.addListener(function (command) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Added google shopping support
       // Google shopping
       const shopping_regex = "https:\/\/www.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, shopping_regex)
@@ -95,6 +98,7 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
+<<<<<<< HEAD
       // Google translate
       const translate_regex = "https:\/\/translate.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, translate_regex)
@@ -113,6 +117,9 @@ chrome.runtime.onMessage.addListener(function (command) {
   
 =======
 >>>>>>> Added google calendar support
+=======
+
+>>>>>>> Added google shopping support
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
