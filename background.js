@@ -72,14 +72,21 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
+<<<<<<< HEAD
       // Google calendar
       const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
+=======
+
+      // Google calendar
+      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].\*";
+>>>>>>> Added google calendar support
       console.log(current_url, calendar_regex)
       if (current_url.match(calendar_regex)) {
         update_url_regex = RegExp("b\/[0-9]");
         update_acc = "b/" + account_num
       }
 
+<<<<<<< HEAD
       // Google shopping
       const shopping_regex = "https:\/\/www.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, shopping_regex)
@@ -104,6 +111,8 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "u/" + account_num
       }
   
+=======
+>>>>>>> Added google calendar support
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
