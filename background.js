@@ -4,6 +4,7 @@ chrome.commands.onCommand.addListener(function (command) {
       var current_url = tabs[0].url;
       var account_num = command.substring(command.length - 1);
       var possible_regex = ["u/", "u=", "authuser="]
+      // var mapping = {"u/":[], "u=", "authuser="}
 
       const google_regex = "https:\/\/.+.google.com.*"
       if (current_url.match(google_regex)) {
@@ -18,7 +19,9 @@ chrome.commands.onCommand.addListener(function (command) {
           }
         }
         if (!updated) {
-          alert("Support for this page is under development.")
+          addition = (current_url[-1] == '/') ? "u/" : "/u/";
+          current_url = current_url + addition + account_num;
+          chrome.tabs.update({ url: current_url });
         }
       } else {
         alert("Account switching is not supported on this page.")
