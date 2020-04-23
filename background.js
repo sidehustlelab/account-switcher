@@ -139,8 +139,11 @@ chrome.runtime.onMessage.addListener(function (command) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added keep support
 =======
+=======
+>>>>>>> Modified for slides and sheets
        // Google contacts
        const jamboard_regex = "https:\/\/contacts.google.com\/u\/[0-9].*";
        console.log(current_url, jamboard_regex)
@@ -148,8 +151,12 @@ chrome.runtime.onMessage.addListener(function (command) {
          update_url_regex = RegExp("u\/[0-9]");
          update_acc = "u/" + account_num
        }
+<<<<<<< HEAD
 =======
 >>>>>>> Removed google contacts
+
+>>>>>>> Modified for slides and sheets
+=======
 
 >>>>>>> Modified for slides and sheets
       if (update_acc && update_url_regex) {
