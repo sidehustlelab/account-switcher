@@ -140,6 +140,7 @@ chrome.runtime.onMessage.addListener(function (command) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added keep support
 =======
 =======
@@ -157,6 +158,8 @@ chrome.runtime.onMessage.addListener(function (command) {
 
 >>>>>>> Modified for slides and sheets
 =======
+=======
+>>>>>>> Removed google contacts
 
 >>>>>>> Modified for slides and sheets
       if (update_acc && update_url_regex) {
