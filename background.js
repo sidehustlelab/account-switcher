@@ -138,6 +138,7 @@ chrome.runtime.onMessage.addListener(function (command) {
        }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Added keep support
 =======
        // Google contacts
@@ -147,6 +148,8 @@ chrome.runtime.onMessage.addListener(function (command) {
          update_url_regex = RegExp("u\/[0-9]");
          update_acc = "u/" + account_num
        }
+=======
+>>>>>>> Removed google contacts
 
 >>>>>>> Modified for slides and sheets
       if (update_acc && update_url_regex) {
