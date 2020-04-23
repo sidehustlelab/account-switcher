@@ -13,8 +13,8 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
-      // Google Doc 
-      const doc_regex = "https:\/\/docs.google.com\/document\/u\/[0-9].*";
+      // Google Doc, slides and sheets
+      const doc_regex = "https:\/\/docs.google.com\/document\|presentation\|spreadsheets\/u\/[0-9].*";
       if (current_url.match(doc_regex)) {
         update_url_regex = RegExp("u\/[0-9]");
         update_acc = "u/" + account_num
@@ -137,7 +137,18 @@ chrome.runtime.onMessage.addListener(function (command) {
          update_acc = "u/" + account_num
        }
 
+<<<<<<< HEAD
 >>>>>>> Added keep support
+=======
+       // Google contacts
+       const jamboard_regex = "https:\/\/contacts.google.com\/u\/[0-9].*";
+       console.log(current_url, jamboard_regex)
+       if (current_url.match(jamboard_regex)) {
+         update_url_regex = RegExp("u\/[0-9]");
+         update_acc = "u/" + account_num
+       }
+
+>>>>>>> Modified for slides and sheets
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
