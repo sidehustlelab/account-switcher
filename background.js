@@ -1,5 +1,4 @@
-chrome.commands.onCommand.addListener(function (command) {
-  if (command.match("account-[0-9]") ) {
+chrome.runtime.onMessage.addListener(function (command) {
     chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
     
       var current_url = tabs[0].url;
@@ -65,7 +64,6 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
-      
       // Google Duo web
       const duo_regex = "https:\/\/duo.google.com\/u\/[0-9].*";
       console.log(current_url, duo_regex)
@@ -73,7 +71,6 @@ chrome.commands.onCommand.addListener(function (command) {
         update_url_regex = RegExp("u\/[0-9]");
         update_acc = "u/" + account_num
       }
-
 
       // Google calendar
       const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
@@ -99,23 +96,28 @@ chrome.commands.onCommand.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
-       // Google Keep
-       const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
-       console.log(current_url, keep_regex)
-       if (current_url.match(keep_regex)) {
-         update_url_regex = RegExp("u\/[0-9]");
-         update_acc = "u/" + account_num
-       }
-
+      // Google Keep
+      const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
+      console.log(current_url, keep_regex)
+      if (current_url.match(keep_regex)) {
+        update_url_regex = RegExp("u\/[0-9]");
+        update_acc = "u/" + account_num
+      }
+  
       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
-        chrome.tabs.update({ url: current_url });       
+        if(command.substring(0,command.length - 1)=="alt"){
+          chrome.tabs.update({ url: current_url })
+        }    
+        else{
+          chrome.tabs.create({ url: current_url }) 
+        }  
       }
       else {
         console.log("Account switching is not supported on this page.")
       }
-
-    });
-  }
+  
+    });    
 });
+
