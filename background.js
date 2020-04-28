@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener(function (command) {
       }
 
       // Google Doc, slides and sheets
-      const doc_regex = "https:\/\/docs.google.com\/document\|presentation\|spreadsheets\/u\/[0-9].*";
+      const doc_regex = "https:\/\/docs.google.com\/(document|presentation|spreadsheets)\/u\/[0-9].*";
       if (current_url.match(doc_regex)) {
         update_url_regex = RegExp("u\/[0-9]");
         update_acc = "u/" + account_num
@@ -72,28 +72,14 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "u/" + account_num
       }
 
-<<<<<<< HEAD
       // Google calendar
       const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
-=======
-
-      // Google calendar
-<<<<<<< HEAD
-      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].\*";
->>>>>>> Added google calendar support
-=======
-      const calendar_regex = "https:\/\/calendar.google.com\/calendar\/b\/[0-9].*";
->>>>>>> updated calendar
       console.log(current_url, calendar_regex)
       if (current_url.match(calendar_regex)) {
         update_url_regex = RegExp("b\/[0-9]");
         update_acc = "b/" + account_num
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Added google shopping support
       // Google shopping
       const shopping_regex = "https:\/\/www.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, shopping_regex)
@@ -102,10 +88,6 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_acc = "authuser=" + account_num
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Added translate support
       // Google translate
       const translate_regex = "https:\/\/translate.google.co.in\/.*\?authuser=[0-9].*";
       console.log(current_url, translate_regex)
@@ -113,22 +95,7 @@ chrome.runtime.onMessage.addListener(function (command) {
         update_url_regex = RegExp("authuser=[0-9]");
         update_acc = "authuser=" + account_num
       }
-
-<<<<<<< HEAD
-      // Google Keep
-      const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
-      console.log(current_url, keep_regex)
-      if (current_url.match(keep_regex)) {
-        update_url_regex = RegExp("u\/[0-9]");
-        update_acc = "u/" + account_num
-      }
   
-=======
->>>>>>> Added google calendar support
-=======
-
->>>>>>> Added google shopping support
-=======
        // Google Keep
        const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
        console.log(current_url, keep_regex)
@@ -137,14 +104,6 @@ chrome.runtime.onMessage.addListener(function (command) {
          update_acc = "u/" + account_num
        }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Added keep support
-=======
-=======
->>>>>>> Modified for slides and sheets
        // Google contacts
        const jamboard_regex = "https:\/\/contacts.google.com\/u\/[0-9].*";
        console.log(current_url, jamboard_regex)
@@ -152,17 +111,8 @@ chrome.runtime.onMessage.addListener(function (command) {
          update_url_regex = RegExp("u\/[0-9]");
          update_acc = "u/" + account_num
        }
-<<<<<<< HEAD
-=======
->>>>>>> Removed google contacts
 
->>>>>>> Modified for slides and sheets
-=======
-=======
->>>>>>> Removed google contacts
-
->>>>>>> Modified for slides and sheets
-      if (update_acc && update_url_regex) {
+       if (update_acc && update_url_regex) {
         current_url = current_url.replace(update_url_regex, update_acc);
         console.log(current_url)
         if(command.substring(0,command.length - 1)=="alt"){
