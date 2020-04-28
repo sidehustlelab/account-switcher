@@ -7,60 +7,17 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "permissions": [
-    "tabs"
+  "permissions": ["tabs"], 
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["key_event.js"], 
+      "run_at": "document_start"
+    }
   ],
   "browser_action": {
     "default_icon": "images/tabFlipper16.png",
     "default_title": "Use Alt + <num> key to switch between google accounts"
-  },
-  "commands": {
-    "account-0": {
-      "suggested_key": {
-        "default": "Alt+0",
-        "mac": "Alt+0"
-      },
-      "description": "Account 0"
-    },
-  "account-1": {
-      "suggested_key": {
-        "default": "Alt+1",
-        "mac": "Alt+1"
-      },
-      "description": "Account 1"
-    },
-    "account-2": {
-      "suggested_key": {
-        "default": "Alt+2",
-        "mac": "Alt+2"
-      },
-      "description": "Account 2"
-    },
-    "account-3": {
-      "suggested_key": {
-        "default": "Alt+3",
-        "mac": "Alt+3"
-      },
-      "description": "Account 3"
-    },
-    "account-4": {    
-      "description": "Account 4"
-    },
-    "account-5": {      
-      "description": "Account 5"
-    },
-    "account-6": {
-      "description": "Account 6"
-    },
-    "account-7": {      
-      "description": "Account 7"
-    },
-    "account-8": {    
-      "description": "Account 8"
-    },
-    "account-9": {
-      "description": "Account 9"
-    }
   },
   "icons": {
     "16": "images/tabFlipper16.png",
