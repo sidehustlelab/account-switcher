@@ -1,5 +1,5 @@
 {
-  "name": "Google App account Switcher",
+  "name": "Account Switcher for Google Apps",
   "description": "Use Alt + <num> key to switch between google accounts for various google apps like Gmail, Play music, Google Drive etc",
   "version": "1.6.1",
   "manifest_version": 2,
