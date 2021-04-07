@@ -1,7 +1,7 @@
 # account-switcher
 Chrome Extension for Switching Google Account in Web Apps
 
-#### Download and install from the [Chrome Store](https://chrome.google.com/webstore/detail/google-app-account-switch/gkdjdghoaaooagapfhmjgnagiigocjob/related?)
+#### Download and install from the [Chrome Store](https://chrome.google.com/webstore/detail/google-app-account-switch/gkdjdghoaaooagapfhmjgnagiigocjob/related?) | [Firefox Store](https://addons.mozilla.org/en-GB/firefox/addon/account-switcher-google-apps/)
 
 ### What does the extension do ?
 This extension is for people using multiple Google accounts in their browser.
