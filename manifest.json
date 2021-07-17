@@ -17,6 +17,7 @@
   ],
   "browser_action": {
     "default_icon": "images/tabFlipper16.png",
+    "default_popup": "popup.html",
     "default_title": "Use Alt + <num> key to switch between google accounts"
   },
   "icons": {
