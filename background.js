@@ -79,8 +79,8 @@ chrome.runtime.onMessage.addListener(function (command) {
     const calendar_regex = "https:\/\/calendar.google.com\/calendar\/u\/[0-9].*";
     console.log(current_url, calendar_regex)
     if (current_url.match(calendar_regex)) {
-      update_url_regex = RegExp("b\/[0-9]");
-      update_acc = "b/" + account_num
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num
     }
 
     // Google shopping
