@@ -1,4 +1,3 @@
-  
 on:
   push:
     tags:
@@ -10,9 +9,9 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Packaged Extension Release
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'account_switcher_extension.zip'
-        exclusions: '*.git* *.github* .gitignore'
+      - uses: actions/checkout@master
+      - name: Packaged Extension Release
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: 'account_switcher_extension.zip'
+          exclusions: '*.git* *.github* .gitignore'

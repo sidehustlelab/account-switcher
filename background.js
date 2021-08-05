@@ -20,6 +20,13 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num
     }
 
+	// Google Spreadsheet
+	const spreadsheets_regex = "https:\/\/docs.google.com\/spreadsheets\/u\/[0-9].*";
+    if (current_url.match(spreadsheets_regex)) {
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num
+    }
+
     // Google Drive 
     const drive_regex = "https:\/\/drive.google.com\/drive\/u\/[0-9].*";
     if (current_url.match(drive_regex)) {
