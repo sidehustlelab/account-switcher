@@ -12,16 +12,30 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num;
     }
 
-    // Google Doc
+    // Google Docs
     const doc_regex = "https://docs.google.com/document/u/[0-9].*";
     if (current_url.match(doc_regex)) {
       update_url_regex = RegExp("u/[0-9]");
       update_acc = "u/" + account_num;
     }
 
-    // Google Spreadsheet
-    const spreadsheets_regex = "https://docs.google.com/spreadsheets/u/[0-9].*";
-    if (current_url.match(spreadsheets_regex)) {
+    // Google Sheets
+    const sheets_regex = "https://docs.google.com/spreadsheets/u/[0-9].*";
+    if (current_url.match(sheets_regex)) {
+      update_url_regex = RegExp("u/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
+    // Google Slides
+    const slides_regex = "https://docs.google.com/presentation/u/[0-9].*";
+    if (current_url.match(slides_regex)) {
+      update_url_regex = RegExp("u/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
+    // Google Forms
+    const forms_regex = "https://docs.google.com/forms/u/[0-9].*";
+    if (current_url.match(forms_regex)) {
       update_url_regex = RegExp("u/[0-9]");
       update_acc = "u/" + account_num;
     }
