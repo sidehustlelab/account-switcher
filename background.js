@@ -47,13 +47,6 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num;
     }
 
-    // Google Play Music
-    const play_music_regex = "https://play.google.com/music/listen\\?u=[0-9].*";
-    if (current_url.match(play_music_regex)) {
-      update_url_regex = RegExp("\\?u=[0-9]");
-      update_acc = "?u=" + account_num;
-    }
-
     // Google Classroom
     const classroom_regex = "https://classroom.google.com/u/[0-9].*";
     if (current_url.match(classroom_regex)) {
