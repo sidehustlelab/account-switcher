@@ -8,49 +8,49 @@ chrome.runtime.onMessage.addListener(function (command) {
     // Gmail
     const gmail_regex = "https:\/\/mail.google.com\/mail\/u\/[0-9].*";
     if (current_url.match(gmail_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Docs
     const doc_regex = "https:\/\/docs.google.com\/document\/u\/[0-9].*";
     if (current_url.match(doc_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Sheets
     const sheets_regex = "https:\/\/docs.google.com\/spreadsheets\/u\/[0-9].*";
     if (current_url.match(sheets_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Slides
     const slides_regex = "https:\/\/docs.google.com\/presentation\/u\/[0-9].*";
     if (current_url.match(slides_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Forms
     const forms_regex = "https:\/\/docs.google.com\/forms\/u\/[0-9].*";
     if (current_url.match(forms_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Drive
     const drive_regex = "https:\/\/drive.google.com\/drive\/u\/[0-9].*";
     if (current_url.match(drive_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
     // Google Classroom
     const classroom_regex = "https:\/\/classroom.google.com\/u\/[0-9].*";
     if (current_url.match(classroom_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
@@ -76,7 +76,7 @@ chrome.runtime.onMessage.addListener(function (command) {
     const accounts_regex = "https:\/\/myaccount.google.com\/u\/[0-9].*";
     console.log(current_url, accounts_regex);
     if (current_url.match(accounts_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
@@ -84,7 +84,7 @@ chrome.runtime.onMessage.addListener(function (command) {
     const duo_regex = "https:\/\/duo.google.com\/u\/[0-9].*";
     console.log(current_url, duo_regex);
     if (current_url.match(duo_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
@@ -92,7 +92,7 @@ chrome.runtime.onMessage.addListener(function (command) {
     const calendar_regex = "https:\/\/calendar.google.com\/calendar\/u\/[0-9].*";
     console.log(current_url, calendar_regex);
     if (current_url.match(calendar_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
@@ -116,7 +116,7 @@ chrome.runtime.onMessage.addListener(function (command) {
     const keep_regex = "https:\/\/keep.google.com\/u\/[0-9].*";
     console.log(current_url, keep_regex);
     if (current_url.match(keep_regex)) {
-      update_url_regex = RegExp("u/[0-9]");
+      update_url_regex = RegExp("u\/[0-9]");
       update_acc = "u/" + account_num;
     }
 
