@@ -1,7 +1,7 @@
 {
   "name": "Account Switcher for Google Apps",
   "description": "Use Alt + <num> key to switch between google accounts for various google apps like Gmail, Play music, Google Drive etc",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "manifest_version": 2,
   "background": {
     "scripts": ["background.js"],
