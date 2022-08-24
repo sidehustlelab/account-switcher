@@ -127,6 +127,34 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num;
     }
 
+    // Google Workspace
+    const workspace_regex = "https:\/\/workspace.google.com\/u\/[0-9].*";
+    if (current_url.match(workspace_regex)) {
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
+    // Google Workspace Admin
+    const admin_regex = "https:\/\/admin.google.com\/u\/[0-9].*";
+    if (current_url.match(admin_regex)) {
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
+    // Google Search Console
+    const search_console_regex = "https:\/\/search.google.com\/u\/[0-9].*";
+    if (current_url.match(search_console_regex)) {
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
+    // Google Analytics
+    const analytics_regex = "https:\/\/analytics.google.com\/.*\?authuser=[0-9].*";
+    if (current_url.match(analytics_regex)) {
+      update_url_regex = RegExp("authuser=[0-9]");
+      update_acc = "authuser=" + account_num;
+    }
+
     if (update_acc && update_url_regex) {
       current_url = current_url.replace(update_url_regex, update_acc);
       console.log(current_url);
