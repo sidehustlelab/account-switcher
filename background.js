@@ -155,6 +155,13 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "authuser=" + account_num;
     }
 
+    // Google Firebase Console
+    const firebase_console_regex = "https:\/\/console.firebase.google.com\/u\/[0-9].*";
+    if (current_url.match(firebase_console_regex)) {
+      update_url_regex = RegExp("u\/[0-9]");
+      update_acc = "u/" + account_num;
+    }
+
     if (update_acc && update_url_regex) {
       current_url = current_url.replace(update_url_regex, update_acc);
       console.log(current_url);
