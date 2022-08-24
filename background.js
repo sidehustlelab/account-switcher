@@ -88,7 +88,7 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num;
     }
 
-    // Google calendar
+    // Google Calendar
     const calendar_regex = "https:\/\/calendar.google.com\/calendar\/u\/[0-9].*";
     console.log(current_url, calendar_regex);
     if (current_url.match(calendar_regex)) {
@@ -96,16 +96,16 @@ chrome.runtime.onMessage.addListener(function (command) {
       update_acc = "u/" + account_num;
     }
 
-    // Google shopping
-    const shopping_regex = "https:\/\/www.google.co.in\/.*\?authuser=[0-9].*";
+    // Google
+    const shopping_regex = "https:\/\/www.google.com\/.*\?authuser=[0-9].*";
     console.log(current_url, shopping_regex);
     if (current_url.match(shopping_regex)) {
       update_url_regex = RegExp("authuser=[0-9]");
       update_acc = "authuser=" + account_num;
     }
 
-    // Google translate
-    const translate_regex = "https:\/\/translate.google.co.in\/.*\?authuser=[0-9].*";
+    // Google Translate
+    const translate_regex = "https:\/\/translate.google.com\/.*\?authuser=[0-9].*";
     console.log(current_url, translate_regex);
     if (current_url.match(translate_regex)) {
       update_url_regex = RegExp("authuser=[0-9]");
